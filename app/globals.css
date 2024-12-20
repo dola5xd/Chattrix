@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-scroll::-webkit-scrollbar {
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #615ef0;
+  border-radius: 20px;
+}
+
+@layer components {
+  .active-link {
+    @apply text-white rounded-lg bg-Purple;
+  }
+  .send {
+    @apply gap-1 flex-row-reverse justify-items-end [&>span]:rounded-full [&>span]:text-2xl [&>div>p]:bg-Purple [&>div>p]:py-2 [&>div>p]:px-4 [&>div>p]:rounded-md [&>div>p]:text-white [&>div>span]:text-xs [&>div>span]:text-gray-500 [&>div>span]:text-[8px] max-w-[100%] [&>div>p]:text-wrap;
+  }
+  .received {
+    @apply gap-1 [&>span]:rounded-full [&>span]:text-2xl [&>div>p]:bg-gray-300 [&>div>p]:text-Purple [&>div>p]:py-2 [&>div>p]:px-4 [&>div>p]:rounded-md [&>div>span]:text-xs [&>div>span]:text-gray-500 [&>div>span]:text-[8px] max-w-[100%] [&>div>p]:text-wrap;
+  }
+}
