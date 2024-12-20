@@ -1,6 +1,6 @@
 "use client";
 import { createContext, ReactNode, useContext, useState } from "react";
-import { MessageType } from "../_lib/appwrite";
+import { MessageType } from "../_lib/Types";
 
 const MessageContext = createContext<{
   setMessages: React.Dispatch<React.SetStateAction<MessageType[] | []>>;
